@@ -1,4 +1,10 @@
+######################################################
 package AIX::SysInfo;
+######################################################
+#
+# Author: Sergey Leonovich, sleonov@cpan.org
+# Architecture: AIX
+#
 
 use strict;
 our (@ISA, @EXPORT, $VERSION);
@@ -6,7 +12,7 @@ require Exporter;
 
 @ISA = qw(Exporter);
 @EXPORT = qw( get_sysinfo );
-$VERSION = "1.1.1";
+$VERSION = "1.2";
 
 #--------------------------------------------------------
 # Module code begins

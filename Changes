@@ -1,6 +1,6 @@
 Revision history for Perl extension AIX::SysInfo.
 
-1.1		2009-06-17 
+1.2		2009-06-17 
 		- Fixed the bug with packaging of the module
 		- Added these keys: kernel_type, firmware_ver, proc_type
 
