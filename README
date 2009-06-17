@@ -15,9 +15,10 @@ the file, you can read it with perldoc.
 If you want to read it before you install it, you can use
 perldoc directly on the module file.
 
-        perldoc  lib/SysInfo.pm
+        perldoc  SysInfo.pm
 
 VERSION
+    1.1.1 - some bug fixes, added several more keys
     1.1  - rewrite (released on Tue Jun 16 16:39:00 CDT 2009)
     1.0 (released 2000-07-03)
 

@@ -3,5 +3,5 @@ LICENSE
 MANIFEST
 Makefile.PL
 README
-lib/SysInfo.pm
+SysInfo.pm
 t/get_sysinfo.t

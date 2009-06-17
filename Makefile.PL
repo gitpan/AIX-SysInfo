@@ -1,8 +1,10 @@
 use ExtUtils::MakeMaker;
-require 5.008;
+use Test::More;
+
+die "FATAL ERROR: Can only run on AIX" unless ( $^O eq 'aix' );
 
 WriteMakefile(
 	'NAME'		=> 'AIX::SysInfo',
-	'VERSION_FROM'	=> 'lib/SysInfo.pm',
+	'VERSION_FROM'	=> 'SysInfo.pm',
 	'AUTHOR'	=> 'Sergey Leonovich <sleonov@cpan.org>',
 );
