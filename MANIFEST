@@ -1,6 +1,7 @@
 Changes
+LICENSE
 MANIFEST
 Makefile.PL
 README
-SysInfo.pm
-test.pl
+lib/SysInfo.pm
+t/get_sysinfo.t

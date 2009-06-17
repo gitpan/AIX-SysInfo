@@ -1,92 +1,39 @@
-    AIX::SysInfo - A Perl module for retrieving information about an AIX
-    (RS/6000) system
+AIX::SysInfo is a Perl module for retrieving information about an AIX pSeries system
 
-SYNOPSIS
-      use AIX::SysInfo;
-  
-      my %sysinfo = get_sysinfo;
-  
-DESCRIPTION
-    This module provides a Perl interface for accessing information about an
-    RS/6000 machine running the AIX operating system. It makes available a
-    single function, get_sysinfo, which returns a hash containing the
-    following keys:
+You can install it using the usual Perl fashion:
 
-    hostname
-        The value of this key contains the hostname of the system.
+        perl Makefile.PL
+        make
+        make test
+        make install
 
-    serial_num
-        The value of this key contains the unique ID number for the system.
+The documentation is in the module file.  Once you install
+the file, you can read it with perldoc.
 
-    num_procs
-        The value of this key contains the number of processors in the
-        system.
+        perldoc AIX::SysInfo
 
-    total_ram
-        The value of this key contains the total amount of RAM in the
-        system, in megabytes.
+If you want to read it before you install it, you can use
+perldoc directly on the module file.
 
-    total_swap
-        The value of this key contains the total amount of swap space in the
-        system, in megabytes.
-
-    aix_version
-        The value of this key contains the version of AIX and the latest
-        complete maintenance level on ths system, in the form "VRMF-ML".
-
-    model_type
-        The value of this key contains the RS/6000 model type of the system.
-        See the NOTE below for more information.
-
-    proc_speed
-        The value of this key contains the speed of the processors in the
-        system. See the NOTE below for more information.
-
-    sys_arch
-        The value of this key contains the type of processor architecture in
-        the system. See the NOTE below for more information.
-
-    The values for model_type, proc_speed, and sys_arch are obtained by
-    parsing several system values, as described in the IBM TechDoc
-    `Determining CPU Speed in AIX', available from
-    *http://techsupport.services.ibm.com/rs6k/techbrowse/*. This article
-    describes several methods for determining those pieces of information.
-    Unfortunately, the methods provided by IBM do not include every RS/6000
-    model ever made, and some of the methods result in ambiguous results
-    (i.e., multiple values for each key.) All possible values for each item
-    are returned as a single scalar, separated by the word "or".
+        perldoc  lib/SysInfo.pm
 
 VERSION
+    1.1  - rewrite (released on Tue Jun 16 16:39:00 CDT 2009)
     1.0 (released 2000-07-03)
 
-BUGS
-    Since I do not have access to every combination of hardware and
-    operating system, this module has been tested in only a small subset of
-    possible environments. Therefor, there may be "unexpected behavior" in
-    some of the environments where I have not been able to test.
 
-    For that reason, I'd really appreciate it if people would e-mail me if
-    any of the values produced by this module do not conform with their
-    expectations.
-
-    Also, because this is such an early release version, the functions and
-    the types of values returned are subject to change, based on feedback
-    from users. Don't depend on this module (yet!) for use in production
-    code.
-
-TO-DO
-    * Find a more definitive way of obtaining some of the information
-    returned by functions in this module.
-    * Add an object-oriented interface.
-    * Add many more functions.
-    * Add features requested by AIX sysadmins (hint, hint!)
 AUTHOR
       Sandor W. Sklar
       <mailto:ssklar@stanford.edu>
       <http://whippet.stanford.edu/~ssklar/>
+
+      Sergey Leonovich
+      sleonov@cpan.org
   
 COPYRIGHT/LICENSE
-    Copyright (c) 2001, Sandor W. Sklar. This module is free software. It
-    may be used, redistributed, and/or modified under the terms of the Perl
-    Artistic License.
+    Copyright (c) 2001, Sandor W. Sklar.
+    Copyright (c) 2009, Sergey Leonovich
+
+    This module is free software. It may be used, redistributed, and/or modified
+    under the terms of the Perl Artistic License.
 
